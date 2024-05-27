@@ -1,4 +1,13 @@
-public static void Main(string[] args)
+using System;
+using System.Collections.Generic;
+
+namespace proyecto_club
+{
+	class Program
+	{
+		
+                    Console.ReadKey(true);}}}
+            public static void Main(string[] args)
 		{ 
 
         	while (true)
@@ -51,3 +60,4 @@ public static void Main(string[] args)
                 default:
                     Console.WriteLine("Opción no válida.");
                     break;
+}}}
