@@ -13,12 +13,12 @@ namespace ClubDeportes
 
 	public class Persona
     {
-        // Campos protegidos para poder acceder desde otras clases
+        // Atributos protegidos para poder acceder desde otras clases
         protected string nombre;
         protected string dni;
         protected int edad;
 
-        // Propiedades públicas para acceso a los campos privados
+        // Propiedades públicas para acceso a los Atributos privados
         public string Nombre
         {
             get { return nombre; }
@@ -37,7 +37,7 @@ namespace ClubDeportes
             set { edad = value; }
         }
 
-        // Constructor que inicializa todos los campos
+        // Constructor que inicializa todos los Atributos
         public Persona(string nombre, string dni, int edad)
         {
             this.nombre = nombre;
