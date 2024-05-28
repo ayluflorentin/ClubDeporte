@@ -66,22 +66,32 @@ public class Entrenador : Persona
     }
 
     // Método para dar de baja un entrenador
-    public static void DarDeBajaEntrenador(List<Entrenador> entrenadores)
-    {
-        Console.WriteLine("Ingrese DNI del entrenador a dar de baja:");
-        string dni = Console.ReadLine();
+   public static void DarDeBajaEntrenador(List<Entrenador> entrenadores)
+		{
+		    Console.WriteLine("Ingrese DNI del entrenador a dar de baja:");
+		    string dni = Console.ReadLine();
+		
+		    Entrenador entrenadorABorrar = null; // Inicializamos la variable como null
+		
+		    foreach (Entrenador entrenador in entrenadores)
+		    {
+		        if (entrenador.DNI == dni)
+		        {
+		            entrenadorABorrar = entrenador;
+		            break; // Terminamos el bucle una vez que se encuentra el entrenador
+		        }
+		    }
+		
+		    if (entrenadorABorrar != null)
+		    {
+		        entrenadores.Remove(entrenadorABorrar);
+		        Console.WriteLine("Entrenador dado de baja con éxito.");
+		    }
+		    else
+		    {
+		        Console.WriteLine("Entrenador no encontrado.");
+		    }
+		}
 
-        Entrenador entrenadorABorrar = entrenadores.Find(e => e.DNI == dni);
-
-        if (entrenadorABorrar != null)
-        {
-            entrenadores.Remove(entrenadorABorrar);
-            Console.WriteLine("Entrenador dado de baja con éxito.");
-        }
-        else
-        {
-            Console.WriteLine("Entrenador no encontrado.");
-        }
-    }
 }
         
